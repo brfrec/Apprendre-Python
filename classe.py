@@ -21,10 +21,11 @@ print ("Le ", (gateauBanane.taille), "gateau est a la ", (gateauBanane.parfum))
 gateauBanane.CouperEnPpart(2)# Coupé en deux parts
 
 class Voiture:
-    def __init__(self, marque, couleur, puissance):
+    def __init__(self, marque, couleur, puissance, proprietaire ):
         self.marque = marque
         self.couleur = couleur
         self.puissance = puissance
+        self.proprietaire = proprietaire
 
     def Accelerer(self, vitesse):
         self.vitesse = vitesse
@@ -34,7 +35,13 @@ class Voiture:
         self.vitesse = vitesse
         print("La voiture ", (self.marque), "freine à", (self.vitesse), "km/h")
 
-QL = Voiture("Renault 4L", "orange", "180 ch")
-print("La voiture est une ", (QL.marque), "de couleur ", (QL.couleur), "et de puissance ", (QL.puissance))
+QL = Voiture("Renault 4L", "orange", "180 ch", "appartient a charlou")
+print("La voiture est une ", (QL.marque), "de couleur ", (QL.couleur), "et de puissance ",
+       (QL.puissance), "et elle appartient à ", (QL.proprietaire))
 QL.Accelerer(280)
 QL.Freiner(0)
+rseize = Voiture("Renault 16", "bleue", "25 ch", "appartient a boti")
+print("La voiture est une ", (rseize.marque), "de couleur ", (rseize.couleur), 
+      "et de puissance ", (rseize.puissance), "et elle ", (rseize.proprietaire))   
+rseize.Accelerer(70)
+rseize.Freiner(10)
