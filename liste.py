@@ -16,6 +16,8 @@ toute_liste[1].append("Coucou")
 print(toute_liste)
 toute_liste[1].insert(3, "Hi")
 print(toute_liste)
+toute_liste[0].append(36)
+print(toute_liste)  
 
 """
 # Supprimer un élément d'une liste
